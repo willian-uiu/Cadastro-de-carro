@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-  titulo = 'Cadastro de Carros';
+  titulo = 'Car System 0.1';
 }

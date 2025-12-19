@@ -2,10 +2,17 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
+import { CarroFormulario } from './components/carro-formulario/carro-formulario';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer],
+  imports: [
+    Header,
+    Footer,
+    CarroFormulario,
+    FormsModule
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
