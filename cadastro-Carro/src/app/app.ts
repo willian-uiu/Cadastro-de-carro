@@ -4,6 +4,7 @@ import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
 import { CarroFormulario } from './components/carro-formulario/carro-formulario';
 import { FormsModule } from '@angular/forms';
+import { Carros } from './components/carros/carros';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +12,12 @@ import { FormsModule } from '@angular/forms';
     Header,
     Footer,
     CarroFormulario,
-    FormsModule
+    Carros,
+    FormsModule,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('cadastro-Carro');
+  
 }

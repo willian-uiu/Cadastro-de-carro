@@ -5,24 +5,24 @@
 
         <div class="col-md-12">
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" id="nome" name="nome" class="form-control" placeholder="Ex.: HB20, Gol, Uno, Celta" required />
+            <input [(ngModel)]="carroInput.nome" type="text" id="nome" name="nome" class="form-control" placeholder="Ex.: HB20, Gol, Uno, Celta" required />
         </div>
 
 
         <div class="col-md-6">
             <label for="montadora" class="form-label">Montadora</label>
-            <input type="text" id="montadora" name="montadora" class="form-control"
+            <input [(ngModel)]="carroInput.montadora" type="text" id="montadora" name="montadora" class="form-control"
                 placeholder="Ex.: Ford, Chevrolet, Fiat" required />
         </div>
 
         <div class="col-md-4">
             <label for="preço" class="form-label">Preço</label>
-            <input type="number" id="preço" name="preço" class="form-control" placeholder="Ex.: 50000" required />
+            <input [(ngModel)]="carroInput.preco" type="number" id="preço" name="preço" class="form-control" placeholder="Ex.: 50000" required />
         </div>
 
         <div class="col-md-2">
             <label for="ano" class="form-label">Ano</label>
-            <input type="number" id="ano" name="ano" class="form-control" placeholder="Ex.: 2020" required />
+            <input [(ngModel)]="carroInput.ano" type="number" id="ano" name="ano" class="form-control" placeholder="Ex.: 2020" required />
         </div>
 
         <div class="col-12">
