@@ -9,9 +9,13 @@ import { CarroExp } from '../../Carro';
   styleUrl: './carro-formulario.css',
 })
 export class CarroFormulario {
-  @Input() 
-  carroInput : CarroExp = {} as CarroExp;
+  @Input()
+  carro : CarroExp = {} as CarroExp;
 
   @Output()
   saveEmitter = new EventEmitter();
+
+  save(){
+    this.saveEmitter.emit();
+  }
 }

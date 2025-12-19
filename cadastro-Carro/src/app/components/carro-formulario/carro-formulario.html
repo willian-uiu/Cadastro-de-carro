@@ -5,28 +5,28 @@
 
         <div class="col-md-12">
             <label for="nome" class="form-label">Nome</label>
-            <input [(ngModel)]="carroInput.nome" type="text" id="nome" name="nome" class="form-control" placeholder="Ex.: HB20, Gol, Uno, Celta" required />
+            <input [(ngModel)]="carro.nome" type="text" id="nome" name="nome" class="form-control" placeholder="Ex.: HB20, Gol, Uno, Celta" required />
         </div>
 
 
         <div class="col-md-6">
             <label for="montadora" class="form-label">Montadora</label>
-            <input [(ngModel)]="carroInput.montadora" type="text" id="montadora" name="montadora" class="form-control"
+            <input [(ngModel)]="carro.montadora" type="text" id="montadora" name="montadora" class="form-control"
                 placeholder="Ex.: Ford, Chevrolet, Fiat" required />
         </div>
 
         <div class="col-md-4">
             <label for="preço" class="form-label">Preço</label>
-            <input [(ngModel)]="carroInput.preco" type="number" id="preço" name="preço" class="form-control" placeholder="Ex.: 50000" required />
+            <input [(ngModel)]="carro.preco" type="number" id="preço" name="preço" class="form-control" placeholder="Ex.: 50000" required />
         </div>
 
         <div class="col-md-2">
             <label for="ano" class="form-label">Ano</label>
-            <input [(ngModel)]="carroInput.ano" type="number" id="ano" name="ano" class="form-control" placeholder="Ex.: 2020" required />
+            <input [(ngModel)]="carro.ano" type="number" id="ano" name="ano" class="form-control" placeholder="Ex.: 2020" required />
         </div>
 
         <div class="col-12">
-            <button type="submit" class="btn btn-primary" [disabled]="formBook.invalid" >Cadastrar</button>
+            <button class="btn btn-primary" (click)="save()" [disabled]="formBook.invalid" >Cadastrar</button>
         </div>
     </form>
 </div>
