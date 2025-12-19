@@ -10,20 +10,27 @@ import { CarroFormulario } from '../carro-formulario/carro-formulario';
   styleUrl: './carros.css',
 })
 export class Carros {
-  carroInput : CarroExp = {} as CarroExp;
-  idCounter = 4;
+  carroInput: CarroExp = {} as CarroExp;
+  idCounter = 1;
+  isUpdate = false;
 
-  carros : CarroExp[] = [
-    
-    { id: 1, nome: 'Gol', montadora: 'Volkswagen', preco: 50000, ano: 2018 },
-    { id: 2, nome: 'Onix', montadora: 'Chevrolet', preco: 60000, ano: 2019 },
-    { id: 3, nome: 'Fiesta', montadora: 'Ford', preco: 55000, ano: 2017 },
-  ]
+  carros: CarroExp[] = []
 
-  saveCarro(){
-    this.carroInput.id = this.idCounter;
-    this.idCounter++;
-    this.carros.push(this.carroInput);
+  saveCarro() {
+    if (!this.isUpdate) {
+      this.carroInput.id = this.idCounter;
+      this.idCounter++;
+      this.carros.push(this.carroInput);
+    }
     this.carroInput = {} as CarroExp;
+    this.isUpdate = false;
+  }
+
+  alterar(carro: CarroExp) {
+    this.isUpdate = true;
+    this.carroInput = carro;
+  }
+  remover(carro: CarroExp) {
+    this.carros = this.carros.filter(c => c !== carro);
   }
 }

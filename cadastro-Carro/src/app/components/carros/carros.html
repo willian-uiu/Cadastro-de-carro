@@ -20,8 +20,8 @@
                 <td>{{carro.montadora}}</td>
                 <td>{{carro.preco}}</td>
                 <td class="col text-end">
-                    <button class="btn btn-success me-2">Alterar</button>
-                    <button class="btn btn-danger me-2">Remover</button>
+                    <button class="btn btn-success me-2" (click)="alterar(carro)">Alterar</button>
+                    <button class="btn btn-danger me-2" (click)="remover(carro)">Remover</button>
                 </td>
             </tr>
         </tbody>
